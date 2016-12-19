@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/limichange/sequelize-demo#readme",
   "dependencies": {
+    "mysql": "^2.12.0",
     "sequelize": "^3.27.0"
   }
 }

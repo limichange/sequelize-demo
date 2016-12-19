@@ -9,6 +9,31 @@ module.exports = {
       Example:
       return queryInterface.createTable('users', { id: Sequelize.INTEGER });
     */
+    queryInterface.createTable('user', {
+      id: {
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+      },
+      createdAt: {
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        type: Sequelize.DATE
+      },
+      nickname: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      password: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      username: {
+        type: Sequelize.STRING,
+        allowNull: false
+      }
+    });
   },
 
   down: function (queryInterface, Sequelize) {
@@ -19,5 +44,6 @@ module.exports = {
       Example:
       return queryInterface.dropTable('users');
     */
+    queryInterface.dropTable('user')
   }
 };
